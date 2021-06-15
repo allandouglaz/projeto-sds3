@@ -1,9 +1,24 @@
-const Home =() => {
-    return (
-      <div>
-          <h1>Home Page</h1>
-    </div>
-    );
-  }
-  
-  export default Home;
+import Footer from "components/Footer";
+import NavBar from "components/NavBar";
+import { Link } from "react-router-dom";
+
+const Home = () => {
+  return (
+    <>
+      <NavBar />
+      <div className="container">
+        <div className="jumbotron">
+          <h1 className="display-4">DSVendas</h1>
+          <p className="lead">Analise o desempenho das suas vendas por diferentes perspectivas.</p>
+          <hr />
+          <p>Esta aplicação consiste em exibir um dashboard a partir de dados fornecidos por um back end construido com Spring boot</p>
+          <Link className="btn btn-primary btn-lg" to="/Dashboard">
+            Acessar Dashboard
+          </Link>
+        </div>
+      </div>
+      <Footer />
+    </>
+  );
+}
+export default Home;
